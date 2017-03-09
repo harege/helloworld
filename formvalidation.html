@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+</head>
+<script>
+function namecheck(){
+var name=document.getElementById("user").value;
+var reg=/^[a-zA-Z\s]+$/;
+if(reg.test(name)==false){
+alert("incorrect name")
+return false;
+}
+else{
+alert("correct name")
+}
+} 
+function phonecheck(){
+var phone=document.getElementById("test").value;
+var pho=/^[2-9]{1}[0-9]{9}$/
+if(pho.test(phone)==false)
+{
+alert("invalid phone no");
+return false;
+}
+else{
+alert("valid phone no");
+}
+} 
+function agecheck(){
+var age=document.getElementById("tst").value;
+var are=/^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9])$/;
+if(are.test(age)==false){
+alert("invalid age enter your age ");
+} 
+else{
+alert("correct");
+}
+}
+function passwordcheck(){
+var password=document.getElementById("pas").value;
+var pas= /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/;
+if(pas.test(password)==false)
+alert("invalid password");
+else{
+alert("valid password");
+}
+}   
+function emailcheck(){
+var email=document.getElementById("ema").value;
+var emi=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+if(emi.test(email)==false){
+alert("you entered wrong email");
+}
+else{
+alert("you entered correct");
+}
+}  
+function validation()   
+{ 
+
+var name=document.getElementById("user").value;
+var age=document.getElementById("tst").value;
+var phone=document.getElementById("test").value;
+var email=document.getElementById("ema").value;
+var password=document.getElementById("pas").value;
+//var y=value.match(/^[a-zA-Z\s]+$/);
+//var passw= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+if(name=="" || name ==null){
+alert("enter your name");
+}
+
+else if(phone=="" || phone ==null){
+alert("enter your phone number");
+}
+else if((phone.length<10) || (phone.length>10))
+{
+alert("phone no must be 10 digits")
+} 
+
+else if(age=="" || password ==null){
+alert("enter your age");
+}
+else if(password=="" || password ==null){
+alert("enter your password");
+}
+else if((password.length<8) || (password.length>8))
+{
+alert("password must be 8 character")
+}
+  
+else if(email=="" || email ==null){
+alert("enter your emailaddress");
+}
+
+}
+
+</script>
+<body>
+
+<form method="get">
+
+
+  Name:<input type="text" name="name" value="" id="user" onblur="javascript:namecheck()"></br></br>
+ Phone:<input type="text" name="phone" value=""id="test" onblur="javascript:phonecheck()"></br></br>
+Age:<input type="text" name="age" value="" id="tst" onblur="javascript:agecheck()"></br></br>
+Password:<input type="password" name"password" value="" id="pas" onblur="javascript:passwordcheck()"></br></br></br>
+Email:<input type="email" name="email" value="" id="ema" onblur="javascript:emailcheck()"></br></br>
+<input type="reset" value="reset"></br>
+  <input type="button" value="confirm	" id="demo" onclick="validation()"></button></br>
+ 
+</form>
+</body>
+</html>
