@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html>
+<head>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+
+</head>
+<body>
+<h1 align="center"> Shipping</h1>
+
+<form>
+
+Name<input type="text" value="" id="txtFirst"></br></br>
+Address<input type="text" value="" id="txtSecond"></br></br>
+
+</form>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+    $('#txtFirst').keyup(function(e) {
+
+        var txtVal = $(this).val();
+
+        $('#txtSecond').val(txtVal);
+
+    });
+
+     
+
+    $('#txtSecond').keyup(function(e) {
+
+        var txtVal = $(this).val();
+
+        $('#txtFirst').val(txtVal);
+
+    });
+
+});
+</script>

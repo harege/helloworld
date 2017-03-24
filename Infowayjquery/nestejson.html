@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+</head>
+</style>
+<body>
+<div id="empid"></div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+employee={
+employ:{"employeename":"daniel",
+                "age":30,
+                "empid":"dani12"
+
+               },
+info:{"infoname":"abebe",
+"infoid":"456"
+},
+student:{"studname":"kebe",
+"studeid":"256"
+}
+}
+$("#empid").html(employee.employ.employeename+"</br>"+employee.info.infoname);
+});
+
+</script>

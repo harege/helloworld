@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+</head>
+</style>
+<body>
+<div id="empid"></div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+var employee={"employeename":"daniel",
+                "age":"30",
+                "empid":"dani12"
+
+               };
+$("#empid").html("my name is:"+employee.employeename+"</br>"+"my age is:"+employee.age);
+});
+
+</script>

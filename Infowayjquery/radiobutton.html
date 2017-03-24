@@ -1,0 +1,31 @@
+<!doctype>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+</head>
+<body>
+<form>
+  <div>
+    Toyota<input type="radio" name="fruit" value="TOYOTA" id="orange">
+  
+  </div>
+  <div>
+    BMW<input type="radio" name="fruit" value="BMw" id="apple">
+ 
+  </div>
+  <div>
+    Nissan<input type="radio" name="fruit" value="NISSAN" id="banana">
+   <!-- <label for="banana">banana</label>-->
+  </div>
+  <div id="log"></div>
+<input type="button" value="submit"></button>
+</form>
+ 
+<script>
+$( "input" ).on( "click", function() {
+  $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+});
+</script>
+</body>
+<html>

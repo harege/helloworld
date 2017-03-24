@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="myModule">
+<head>
+<script src="js/angular.js"></script>
+
+<body>
+<div ng-controller="mycontroller"><input type="text" ng-model="myModule" placeholder="Enter name here">{{myModul}}</div>
+<!--<div ng-controller="mycontroller"><input type="text" ng-model="myModul" placeholder="Enter name here">{{myModul}}</div>-->
+
+
+
+
+</body>
+</html>
+<script>
+var myModule=angular.module("myModule",[]).controller("mycontroller",function($scope){
+	
+
+$scope.myModul="hello";
+
+});
+</script>

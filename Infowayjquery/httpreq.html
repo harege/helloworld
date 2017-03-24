@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myModule" >
+<head>
+<script src="js/angular.js"></script>
+</head>
+<body>
+<div  ng-include="tableangula4.html"ng-controller="mycontroller">{{myWelcome}}</div>
+</body>
+</html>
+</script>
+
+
+var myModule=angular.module("myModule",[]).controller("mycontroller",function($scope,$http){
+ $http.get("tableangula4.html")
+  .then(function(response) {
+      $scope.myWelcome = response.data;
+  });
+});
+</script>

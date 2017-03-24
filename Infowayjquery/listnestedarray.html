@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myMudule">
+<head>
+<script src="js/angular.js"></script>
+<body>
+<div ng-controller="mycontroller">
+<ul ng-repeat="world in co">
+<li>{{world.name}}</li>
+<ul ng-repeat="city in world.cities">
+<li>{{city.name}}</li>
+</ul>
+</div>
+
+
+</body>
+</html>
+<script>
+
+var myModule=angular.module("myMudule",[]).controller("mycontroller",function($scope){
+var country=[{
+
+name:"ethiopia",cities:[{name:"addisabab"},{name:"gonder"}]
+},
+{
+name:"india","cities":[{name:"hyderabad"},{name:"mombai"}]
+}];
+
+$scope.co=country;
+
+});
+</script>

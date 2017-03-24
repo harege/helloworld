@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+<body>
+<div id="id"></div>
+<p id="nn"></p>
+Name:<input type="text">
+</body>
+</html>
+
+
+<script>
+$(document).ready(function(){
+//$("#id").load(function())
+//$("#id").load("temp.txt")
+$("#nn").unload("temp.txt");
+$("#id").append("temp.txt");
+});
+</script>

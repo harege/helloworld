@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="Infoway">
+<head>
+<script src="js/angular.js"></script>
+</head>
+<body>
+<div ng-controller="Infowaycontroller">{{country.countryname}}
+</br><img  ng-src="{{country.flag}}" height="100px" width="100px"/></div>
+</body>
+</html>
+<script>
+var InfowayModule=angular.module("Infoway",[]).controller("Infowaycontroller",function($scope){
+	var country={"countryname":"united state","flag" : "js/unite.png"}
+
+$scope.country=country;
+
+});
+
+</script>

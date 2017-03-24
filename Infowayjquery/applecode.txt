@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#monday{
+padding-left:26px;
+width:375px;
+font-family:Myriad Set Pro; 
+font-size:28px 
+font-weight:Thin;
+color: #333;
+}
+#bo1{
+margin-left:26px;
+width:375px;
+border-top:10px solid #CCCCCC;
+}
+#bo{
+width:375px;
+margin-left:26px;
+border-top:1px solid #D5D5D5;
+}
+#sp1{
+padding-top:45px;
+padding-left:26px;
+font-family:Myriad Set Pro Ultralight;
+font-size:80px; 
+color:#47ACF5;
+}
+#sp2{
+padding-top:45px;
+padding-left:60px;
+font-family:Myriad Set Pro Ultralight;
+font-size:80px;
+color: #47ACF5;
+}
+#sp3{
+padding-top:45px;
+padding-left:60px;
+font-family:Myriad Set Pro Ultralight;
+font-size:80px;
+color: #47ACF5;
+}
+#sm1{
+font-size:16px;
+margin-top:18px;
+padding-left:26px;
+font-family:Myriad Set Pro Text;
+color: #999;
+}
+#sm2{
+
+padding-left:75px;
+font-size:16px;
+margin-top:18px;
+font-family:Myriad Set Pro Text;
+color:#999;
+}
+#sm3{
+padding-left:75px;
+font-size:16px;
+margin-top:18px;
+font-family:Myriad Set Pro Text;
+color:#999;
+}
+#sm4{
+font-size:16px;
+padding-left:26px;
+font-family:Myriad Set Pro Text;
+color:#999;
+}
+#di{
+margin-left:26px;
+
+
+width:375px; 
+background-color:#F7F7F7;
+font-family:Myriad Set Pro Text; 
+font-size:14PX; 
+color: #47ACF5;
+}
+#di1{
+font-family:Myriad Set Pro Text; 
+font-size:14px; 
+color:#4C9DD6;
+}
+
+#di3{
+line-height:18px;
+padding-left:26px;
+}
+#di4{
+padding-left:26px;
+line-height:18px;
+font-size:14px;
+color:#757575;
+}
+
+#di5{
+font-size:14px;
+color:#757575;
+}
+#di6{
+font-size:14px;
+color: #47ACF5;
+}
+#di7{
+margin-left:26px;
+width:375px;
+border-bottom:1px solid #CCC;
+}
+#di8{
+margin-left:375px;
+width:375;
+font-size:18px;
+color: #CCCCCC;
+}
+</style>
+</head>
+<body id="di9">
+<div id="bo1"></div>
+<div id="monday">Monday Sept 12,2016</div>
+<div id="bo"></div>
+<span id="sp1">56</span>
+<span id="sp2">04</span>
+<span id="sp3">20</span></br>
+<small id="sm1">Assigned</small>
+<small id="sm2">Reminders</small>
+<small id="sm3">Notifications</small>
+<div id="sm4">Tasks</div>
+<div id="di" align="center">Go to My Workspace<span>></span></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">Just Now</strong></div>
+<div id="di4">Oliver Quiver has assigned the Interview-Book Travel task<div id="di5">to you.
+<span id="di6">View Task></span></div></div>
+<div id="di7"></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">29 Minutes Ago</strong></div>
+<div id="di4">Buck Owens has assined the Mobility-Submit task to<div id="di5">you.
+<span id="di6">View Task></span></div></div>
+ <div id="di7"></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">1 Hour Ago</strong></div>
+<div id="di4">Hans Zola has assigned the Mobility-Compile task to<div id="di5">you.
+<span id="di6">View Task></span></div></div>
+<div id="di7"></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">Yesterday</strong></div>
+<div id="di4">The posting for Pipeline 1754689-Graphics Designers<div id="di5">has been approved.
+<span id="di6">View Pipeline></span></div></div>
+<div id="di7"></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">Yesterday</strong></div>
+<div id="di4">You have been added as a team member on Pipeline<div id="di5">1567864-Creative Leaders.
+<span id="di6">View Pipeline></span></div></div>
+<div id="di7"></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">Yesterday</strong></div>
+<div id="di4">Jackie Treehorn has complted the questionnaire against Pipeline<div id="di5">2474987-chip Layouts.
+<span id="di6">View Questionnaire></span></div></div>
+<div id="di7"></div>
+<div id="di2"><strong id="di3">Yesterday</strong></div>
+<div id="di4">Sam Owens has movedto Offer Stage against Oliver<div id="di5">Oliver's requisition.</div>
+<span id="di6">View Offer></span></div></div>
+<div id="di7"></div>
+<div id="di8">x</div>
+<div id="di2"><strong id="di3">Yesterday</strong></div>
+<div id="di4">Shah Li currently at offer Stage against Liu Chan's<div id="di5">requisition.
+<span id="di6">View Offer></span></div></div>
+<div id="di7"></div>
+
+</body>
+</html>

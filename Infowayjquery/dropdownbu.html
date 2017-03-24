@@ -1,0 +1,32 @@
+<!doctype>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+<style>
+#tst{
+border:1px solid black;
+text-align:center;
+
+}
+</style>
+</head>
+<body>
+<form>
+<select id="sel"> <option value="femal">female</option>
+<option value="mal">male</option>
+</select></br>
+<input type="button" value="submit"></button>
+</form>
+<div id="tst"></div>
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$("#sel").change(function(){
+//$("#tst").html($(this).val());
+$("#tst").html($(this).text());
+});
+});
+</script>

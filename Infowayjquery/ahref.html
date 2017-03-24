@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="myModule" >
+<head>
+<script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="mycontroller">
+<button id="top" ng-click=scroll("bottom") ng-controller="mycontroller">go to bottom</button>
+<P>this is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadesse</P>
+<P>this is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadesse</P>
+<P>this is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadessethis is daniel
+this is dawit
+this is tadesse</P>
+
+<button id="bottom" ng-click=scroll("top") ng-controller="mycontroller">go to top</button>
+</div>
+</body>
+</html>
+<script>
+
+varmyModule=angular.module("myModule",[]).controller("mycontroller",function($scope,$location,$anchorScroll,$scope){
+
+$scope.scrollTo=function(toscroll){
+$location.hash(toscroll);
+$anchorscroll();
+}
+alert("kkk");
+  });
+
+
+</script>

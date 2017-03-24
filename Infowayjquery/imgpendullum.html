@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+<script> 
+/*$(document).ready(function(){
+    $(".but1").click(function(){
+$(".spa1,img").animate({right: '-900px'});
+});
+});*/
+$(document).ready(function(){
+$(".but2").click(function(){
+;
+function firstleft() {
+$(".spa1,img,.spa,img").animate({left: "-=1800px"},2000,"swing",firstright);
+}
+function firstright() {
+$(".spa1,img,.spa,img").animate({left: "+=1800px"},2000,"swing",firstleft);
+}
+firstright();
+});
+
+});
+</script>
+
+</head>
+<body>
+
+
+<span style="width: 100%;" class="spa1" ><img src="tire.jpg"width="80"height="80"align="right"style="position:relative;background-color:red;"></span>
+<span style="width: 100%;" class="spa1"><img src="gg.jpg"  width="80"  height="80" align="right" style="position:relative;background-color:green;"></span>
+<span style="width: 100%;" class="spa1"><img src="hh.jpg"  width="80"  height="80" align="right" style="position:relative;background-color:blue;"></span>
+<span style="width: 100%;" class="spa1"><img src="hh.jpg"  width="80" height="80" align="right" style="position:relative;background-color:yellow;"></span>
+<span style="width: 100%;" class="spa1"><img src="hh.jpg"  width="80" height="80" align="right" style="position:relative;background-color:purple;"></span></br>
+<span style="width: 100%;" class="spa"><img src="hh.jpg"  width="80" height="80" style="position:relative;background-color:red;"></span>
+<span style="width: 100%;" class="spa"><img src="hh.jpg"  width="80" height="80" style="position:relative;background-color:yellow;"></span>
+<span style="width: 100%;" class="spa"><img src="hh.jpg"  width="80" height="80" style="position:relative;background-color:green;"></span>
+<span style="width: 100%;" class="spa"><img src="hh.jpg"  width="80" height="80" style="position:relative;background-color:blue;"></span>
+<span style="width: 100%;" class="spa"><img src="hh.jpg"  width="80" height="80" style="position:relative;background-color:pink;"></span></br></br>
+<!--<button class="but1">Start left 1 </button>-->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="but2">Start right 2</button>
+</html>

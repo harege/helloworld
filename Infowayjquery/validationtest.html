@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+
+</head>
+<script>
+/*function checkvalid(){
+var name=document.getElementById("user").value;
+var phone=document.getElementById("test").value;
+var age=document.getElementById("tst").value;
+var password=document.getElementById("pas").value;
+var email=document.getElementById("ema").value;
+var reg=/^[a-zA-Z\s]+$/;
+//var reg1=/^[a-zA-Z\s]+$/;
+var pho=/^[2-9]{1}[0-9]{9}$/;
+var age1=/^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9])$/;
+var pas= /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/;
+var emi=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;*/
+//
+	function checkvalid(){
+		$(document).ready(function(){
+var name=document.getElementById("user").value;
+var phone=document.getElementById("test").value;
+var age=document.getElementById("tst").value;
+var password=document.getElementById("pas").value;
+var email=document.getElementById("ema").value;
+var reg=/^[a-zA-Z\s]+$/;
+//var reg1=/^[a-zA-Z\s]+$/;
+var pho=/^[2-9]{1}[0-9]{9}$/;
+var age1=/^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9])$/;
+var pas= /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/;
+var emi=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+if($("input").val()==""){
+$(".inp").css({"border-style":"#ff0000","border":"1px solid red"});
+return false;
+}
+if(reg.test(name)==false){
+$("#user").css({"border-style":"#ff0000","border":"1px solid red"});
+$("#border").text("enter your name").fadeOut(1000);
+$("#border1").hide();
+$("#border2").hide();
+$("#border3").hide();
+$("#border4").hide();	
+//$(".inp").keyup(function(){
+
+//});
+return false;
+
+}
+if(reg.test(name)==true){
+ $("#user").css({"border-style":"black","border":"1px solid black"});
+
+
+}
+
+if(pho.test(phone)==false)
+{
+$("#test").css({"border-style":"red","border":"1px solid red"});
+$("#border1").text("enter your phone no").fadeOut(1000);
+//$("#border1").show(100);
+$("#border").hide();
+$("#border2").hide();
+$("#border3").hide();
+$("#border4").hide();
+//$("#border1").keyup().hide();
+return false;
+}
+
+if(pho.test(phone)==true){
+ $("#test").css({"border-style":"black","border":"1px solid black"});
+
+
+}
+
+if(age1.test(age)==false){
+$("#tst").css({"border-style":"red","border":"1px solid red"});
+$("#border2").text("enter your age").fadeOut(1000);
+$("#border1").hide();
+$("#border").hide();
+$("#border2").show();
+$("#border3").hide();
+$("#border4").hide();
+return false;
+}
+
+if(age1.test(age)==true){
+ $("#tst").css({"border-style":"black","border":"1px solid black"});
+
+
+}
+
+//return false;
+ 
+if(pas.test(password)==false){
+$("#pas").css({"border-style":"red","border":"1px solid red"});
+$("#border3").text("enter your password").fadeOut(1000);
+$("#border1").hide();
+$("#border").hide();
+$("#border2").hide();
+$("#border3").show();
+$("#border4").hide();
+return false;
+}
+
+
+if(pas.test(password)==true){
+ $("#pas").css({"border-style":"black","border":"1px solid black"});
+$("#border3").hide();
+
+}
+
+
+
+});
+
+}
+</script>
+<body>
+
+<form method="get">
+
+
+  Name:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" value="" id="user" id="border5" class="inp" placeholder="Enter your name">&nbsp;&nbsp;<span id="border" style="width:50%;height:25%;color:black;border-radius:250px;background-color:red;border:0px solid red;" ></span></br></br>
+ Phone:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="phone" value=""id="test" class="inp" placeholder="Enter your phone">&nbsp;&nbsp;<span id="border1" style="width:25%;height:25%;color:black;border-radius:250px;background-color:red;border:0px solid red"></span></br></br>
+Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="age" value="" id="tst" class="inp" placeholder="Enter your age">&nbsp;&nbsp;<span id="border2" style="width:25%;height:25%;color:black;border-radius:250px;background-color:red;border:0px solid red"></span></br></br>
+Password:<input type="password" name"password" value="" id="pas"  maxlength="8" class="inp" placeholder="Enter your password">&nbsp;&nbsp;<span id="border3" style="width:25%;height:25%;color:black;border-radius:250px;background-color:red;border:0px solid red"></span></br></br></br>
+Email:&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="mail" value="" id="ema" class="inp" placeholder="Enter your Email">&nbsp;&nbsp;<span id="border4" style="width:25%;height:25%;color:black;border-radius:250px;background-color:red;border:0px solid red"></span></br></br>
+<input type="reset" value="reset">
+  <input type="button" value="confirm	" id="demo" onclick="checkvalid()"></button></br>
+ 
+</form>
+</body>
+</html>

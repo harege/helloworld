@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+<style>
+table,th,td{
+border: 1px solid black;
+border-collapse:collapse;
+}
+
+</head>
+</style>
+<body>
+<form>
+<table style="width:50%;">
+  <tr>
+    <th>checkbox</th>
+<th id=>username</th>
+<th>userid</th>
+</tr>
+<tr id="tr1">
+<td><input type="checkbox" id="ch1"></td>
+<td id="a">daniburger</td>
+<td id="b">123</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="ch2"></td>
+<td>daniman</td>
+<td >568</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="ch3"></td>
+<td>daniezana</td>
+<td>856</td>
+</tr>
+</table>
+<div id="tst"></div>
+<input type="button" value="submit"></button>
+</form>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+
+$("[type='checkbox']").each(function(){	
+$(this.checked);
+	});
+$("[type='checkbox']").click(function(){
+
+alert($("#a").text());
+//$("#tst").text($("td"));
+//$("#tr1").css("border-color","red");
+
+
+});
+});
+
+
+</script>

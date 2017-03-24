@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+<style>
+
+.colorclass{
+border-style:solid;
+  border-color :red;
+}
+
+table,th,td{
+border: 1px solid black;
+border-collapse:collapse;
+}
+</style>
+</head>
+
+<body>
+
+<table style="width:50%;" id="tab1">
+  <tr> 
+<!--<th>click<input type="radio" class="selectall3"></th>-->
+<th>click<input type="checkbox" class="selectall2"></th>
+<th>malename</th>
+<th>username</th>
+<th>userid</th>
+</tr>
+<tr>
+<!--<td><input type="radio" class="ch5"></td>-->
+<td><input type="checkbox" class="ch2"></td>
+<td>daniel</td>
+<td>daniman</td>
+<td>563</td>
+</tr>
+<tr>
+<!--<td><input type="radio" class="ch5"></td>-->
+<td><input type="checkbox" class="ch2"></td>
+<td >daniel</td>
+<td>daniman</td>
+<td>563</td>
+</tr>
+<tr>
+<!--<td><input type="radio" class="ch5"></td>-->
+<td><input type="checkbox" class="ch2"></td>
+<td>daniel</td>
+<td>daniman</td>
+<td>563</td>
+</tr>
+</table>
+<table style="width:50%;" id="tab2">
+  <tr>
+<!--<th>click<input type="radio" class="selectall4"></th> -->
+<th>click<input type="checkbox" class="selectall1"></th>
+<th>femalename</th>
+<th>username</th>
+<th>userid</th>
+</tr>
+<tr>
+<tr>
+<!--<td><input type="radio" class="ch6"></td>-->
+<td><input type="checkbox" class="ch1"></td>
+<td>dawit</td>
+<td>daniezan</td>
+<td>123</td>
+</tr>
+<tr>
+<!--<td><input type="radio" class="ch6"></td>-->
+<td><input type="checkbox" class="ch1"></td>
+<td>dawit</td>
+<td>daniezan</td>
+<td>123</td>
+</tr>
+</table>
+<form>
+<select id="sel">
+<option value="plaese enter gender">pls enter gender</option>
+<option value="mal">male</option>
+<option value="femal">female</option>
+</select>
+<input type="button" value="submit" id="submi"></button>
+</form>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$("#tab1").hide();
+$("#tab2").hide();
+$("#sel").change(function(){
+if($(this).val()=="mal"){
+$("#tab1").show();
+$("#tab2").hide();
+}
+else if($(this).val()=="femal"){
+$("#tab2").show();
+$("#tab1").hide();
+}
+$(".selectall1,.selectall2").click(function() {
+    if ($(this).is(':checked')) {
+        $("td,input").attr('checked', true);
+    } else {
+        $("td,input").attr('checked', false);
+    }
+});
+$("#submi").click(function(){
+if($("input:checked").length==0){
+alert("please check one");
+}
+$("input, .ch1, .ch2").click(function(){
+	
+	if($(this).is(":checked")){
+
+	$(this).parents("tr:eq(0)").addClass("colorclass");
+	}
+else{
+$(this).parents("tr:eq(0)").removeClass("colorclass");
+}
+
+});
+});
+});
+});
+
+/*$("tr").each(function(){
+alert(tr);
+});
+$(".selectall3,.selectall4").click(function() {
+    if ($(this).is(':checked')) {
+        $("td,input").attr('checked', true);
+    } else {
+        $("td,input").attr('checked', false);
+    }
+});
+
+$("input, .ch5, .ch6").click(function(){
+	
+	if($(this).is(":checked")){
+
+	$(this).parents("tr:eq(0)").addClass("colorclass");
+	}
+else{
+$(this).parents("tr:eq(0)").removeClass("colorclass");
+}*/
+
+</script>

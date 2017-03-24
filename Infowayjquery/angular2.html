@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="myModule">
+<head>
+<script src="js/angular.js"></script>
+</head>
+<body>
+<div ng-controller="mycontroller">{{emp.firstname}}&nbsp;&nbsp;&nbsp;{{emp.lastname}}</div>
+</body>
+</html>
+<script>
+var myModule=angular.module("myModule",[]).controller("mycontroller",function($scope){
+var employee={"firstname":"jone","lastname":"scott"}
+$scope.emp=employee;
+});
+
+</script>

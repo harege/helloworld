@@ -1,0 +1,79 @@
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+<style>
+#li1,#li2,#li3,#li4,#li5,#li6,#li7{
+	text-decoration: none;
+}
+div,.nal,.na2,.na3,.na4,.na5,.na6,.na7{
+	
+	color:red;
+}
+}
+</style>
+
+</head>
+<body style="background-color:black">
+<div id='nav'>
+    <a href="#" id="li1" style="background-color:white">What is your first name?</a><div class="na1" style="background-color:red">Jhon</div></br></br><a href="#" id="li2"style="background-color:white">What is your middle name?</a> <div class="na2">David</div></br></br> <a href="#" id="li3"style="background-color:white">What is your last name?</a> <div class="na3">Scott</div></br></br><a href="#" id="li4">What is your birthday?</a> <div class="na4">03/25/1978</div></br></br><a href="#" id="li5"style="background-color:white">where do you live?</a> <div class="na5">San Jose</div></br></br><a href="#" id="li6" style="background-color:white">What is your occupation?</a> <div class="na6">Student</div></br></br><a href="#" id="li7">How old are you?</a></br><div class="na7">28</div></br>
+</div>
+	
+	
+</body>
+</body>
+</html>
+<script>
+
+
+
+$(document).ready(function(){
+$(".na1").hide();
+$(".na2").hide();
+$(".na3").hide();
+$(".na4").hide();
+$(".na5").hide();
+$(".na6").hide();
+$(".na7").hide();
+$("#li1").click(function(){
+$(".na1").show(4000);
+$(".na1").hide(4000);
+});
+
+
+$("#li2").click(function(){
+$(".na2").show(4000);
+$(".na2").hide(4000);
+});
+
+
+$("#li3").click(function(){
+$(".na3").show(4000);
+$(".na3").hide(4000);
+});
+
+
+$("#li4").click(function(){
+$(".na4").show(4000);
+$(".na4").hide(4000);
+});
+
+
+$("#li5").click(function(){
+$(".na5").show(4000);
+$(".na5").hide(4000);
+});
+
+
+$("#li6").click(function(){
+$(".na6").show(4000);
+$(".na6").hide(4000);
+});
+
+
+$("#li7").click(function(){
+$(".na7").show(2000);
+$(".na7").hide(2000);
+});
+	});
+
+</script>

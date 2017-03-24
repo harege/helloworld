@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+</head>
+
+<body>
+<div id="empid"></div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+carsname={
+name:["BMW","Toyota","Nissan","Chevelolet"],
+
+modalno:[1234,4256,2569,5697]
+
+  };        
+for(var j=0;j<carsname.name.length;j++)
+{
+$("#empid").append(carsname.name[j]+"</br>"+"</br>");
+ 
+}
+for(var i=0;i<carsname.modalno.length;i++)
+{
+$("#empid").append(carsname.modalno[i]+"</br>"+"</br>");
+ 
+}
+
+});
+
+</script>

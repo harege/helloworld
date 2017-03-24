@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+
+</head>
+<body style="background-color:blue">
+<h1 align="center" style="color:red"> SHIPPING</h1>
+<hr></hr>
+
+<form>
+
+<div style="color:red">Name</div><input type="text" value="" id="ip1">
+<div style="color:red">Zip Code</div><input type="text" value="" id="ip5">
+<div style="color:red">Address</div><input type="text" value="" id="ip2"></br></br>
+<div style="color:red">Add</div><input type="checkbox" value="" id="ch"></br></br>
+<hr></hr>
+<div style="color:red">Name</div><input type="text" value="" id="ip3"></br>
+<div style="color:red">Zip Code</div><input type="text" value="" id="ip7">
+<div style="color:red">Address</div><input type="text" value="" id="ip4"></br>
+<hr></hr>
+<input type="reset"></br></br>
+</form>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$("#ip1").val();
+$("#ip2").val();
+$("#ip5").val();
+$("#ch").click(function(){
+if($(this).is(":checked")){
+$("#ip3").val($("#ip1").val());
+$("#ip4").val($("#ip2").val());
+$("#ip7").val($("#ip5").val())
+$("#ip1").keyup(function(e) {
+  var stt = $(this).val();
+$("#ip3").val(stt); 
+});
+$("#ip2").keyup(function(e) {
+  var stt = $(this).val(); 
+$("#ip4").val(stt); 
+});
+$("#ip5").keyup(function(e) {
+  var stt = $(this).val();
+$("#ip7").val(stt); 
+});
+}
+else{
+$("#ip3").val("");
+$("#ip4").val("");
+$("#ip5").val("");
+}
+});
+});
+</script>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="myMuodule">
+<head>
+<script src="js/angular.js"></script>
+
+
+<style>
+
+table,th,td{
+border: 1px solid black;
+border-collapse:collapse;
+}
+</style>
+</head>
+
+<body>
+<div ng-controller="mycontroller">
+<table style="width:50%;" id="tab1">
+  <tr > 
+<th>name</th>
+<th>like</th>
+<th>dislike</th>
+<th>like/dislike</th>
+</tr>
+<tr ng-repeat="cit in emp">
+<td>{{cit.name}}</td>
+<td>{{cit.like}}</td>
+<td>{{cit.dislike}}</td>
+<td><input type="button" value="like" ng-click="incrementlike(cit)"><input type="button" value="dilike" ng-click="incrementdislike(cit);"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+<script>
+var myModule=angular.module("myMuodule",[]).controller("mycontroller",function($scope){
+var kar =[
+{name:"c++",
+like:0,
+dislike:0
+},
+{name:"java",
+like:0,
+dislike:0
+}];
+$scope.emp=kar;
+$scope.incrementlike=function(cit){
+cit.like++;
+}
+$scope.incrementdislike=function(cit){
+cit.dislike++;
+}
+
+});	
+</script>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="Infowa">
+<head>
+<script src="js/angular.js"></script>
+</head>
+<body>
+<div ng-controller="infocontroller">{{message}}{{emp.firstname+emp.lastname}}</div>
+</body>
+</html>
+<script>
+var InfowayModule=angular.module("Infowa",[]);
+var Infowaycontroller=function($scope){
+var employee={"firstname":"daniel","lastname":"tadesse"}
+$scope.message="hello Info";
+
+$scope.emp=employee;
+}
+
+
+InfowayModule.controller("infocontroller",Infowaycontroller);
+
+</script>

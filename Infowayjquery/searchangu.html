@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<script src="js/angular.js"></script>
+<head>
+<style>
+table,th,td{
+border:1px solid  black;
+border-collapse:collapse;
+}
+</style>
+</head>
+<body>
+<div ng-controller="mycontroller">
+Name<input type="text" ng-model="test">
+
+<table width="50%">
+<tr>
+<th>name</th>
+<th>Date of birth</th>
+<th>Gender</th>
+<th>salary</th>
+</tr>
+<tr ng-repeat="cit in emp | filter :test">
+<td>{{cit.name | uppercase}}</td>
+<td>{{cit.dateofbirth|date:"dd/MM/yyyy"}}</td>
+<td>{{cit.gender}}</td>
+<td>{{cit.salary |currency:"$"}}</td>
+</tr>
+
+
+</table>
+</div>
+</body>
+</html>
+<script>
+var myModule=angular.module("myModule",[]).controller("mycontroller",function($scope){
+var employee=[{
+name:"jordan",
+dateofbirth:new Date("September 28,1980"),
+gender:"male",
+salary:345.45
+},
+{
+name:"jhon",
+dateofbirth:new Date("September 28,1980"),
+gender:"male",
+salary:345.45
+},
+{
+name:"kane",
+dateofbirth:new Date("September 28,1980"),
+gender:"male",
+salary:445.45
+},
+{
+name:"lita",
+dateofbirth:new Date("September 28,1980"),
+gender:"female",
+salary:545.45
+},
+{
+name:"china",
+dateofbirth:new Date("September 28,1980"),
+gender:"female",
+salary:645.45
+}
+
+]
+$scope.emp=employee;
+
+});
+
+
+</script>

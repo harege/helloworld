@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="myModule">
+<head>
+<script src="js/angular.js"></script>
+<style>
+table,th,td{
+border: 1px solid black;
+border-collapse:collapse;
+</style>
+
+</head>
+<body>
+<div ng-controller="mycontroller">
+<table>
+<tr>
+<th>firstname</th>
+<th>lastname</th>
+</tr>
+<tr ng-repeat="emp1 in employee">
+<td>{{emp1.firstname}}</td>
+<td>{{emp1.lastname}}</td>
+</tr>
+
+
+</table>
+</div>
+
+
+</body>
+</html>
+<script>
+var myModule=angular.module("myModule",[]).controller("mycontroller",function($scope){
+var emp=[{"firstname":"daniel","lastname":"tadesse"},{"firstname":"daniel","lastname":"tadesse"},{"firstname":"daniel","lastname":"tadesse"},{"firstname":"daniel","lastname":"tadesse"}];	
+
+$scope.employee=emp;
+
+});
+</script>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+</head>
+</style>
+<body>
+<div id="empid"></div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+var employee=[{"employeename":"daniel",
+                "age":30,
+                "empid":"dani12"
+
+               },
+{
+"studentname":"dawit",
+"studid":"123",
+"studemail":"dani22@gmail.com"
+}];
+//$("#empid").html("my name is:"+employee.employeename+"</br>"+"my age is:"+employee.age);
+//$("#empid").html("stdent name:"+employee.studentname);
+//document.write(employee[1].studentname+"</br> "+employee[1].studid);
+document.write(employee[0].age+"</br> "+employee[1].studid);
+});
+
+</script>

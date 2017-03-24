@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<head>
+<style>
+div.container {
+	position:relative;	
+	background-color:rgba(149, 187, 206, 0.36);
+	height:700px;
+	overflow:hidden;
+}
+
+div.block {
+	height:200px;
+	width:200px;
+	background-color:blue;
+	overflow:hidden;
+}
+
+div.block.first	{
+	position:absolute;
+	left:100px;
+	top:300px;
+	overflow:hidden;
+}
+
+div.block.second {
+	position:absolute;
+	top:10px;
+	left:500px;
+	background-color:green;
+	overflow:hidden;
+}
+
+div.block.third {
+	position:relative;
+	top:350px;
+	left:500px;
+	background-color:red;
+}
+
+div.block.first img {
+	background-size:cover;
+	width:400px;
+	margin-left:-100px;
+}
+
+div.block.second img {
+	background-size:cover;
+	width:400px;
+	margin-left:-100px;
+}
+
+div.block.third img {
+	background-size:cover;
+	width:400px;
+	margin-left:-100px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="block first">
+		<img src="img/first.jpg">	
+	</div>
+	
+	<div class="block second">
+		<img src="img/second.jpg">
+	</div>
+	
+	<div class="block third">
+		<img src="img/third.jpg">
+	</div>
+</body>
+</html>
+<script>
+$(document).ready(function() {
+	function firstleft() {
+		$(".block.first").animate({"left": "-=100px" }, 1500, "swing", firstright);
+	}
+	function firstright() {
+		$(".block.first").animate({"left": "+=100px" }, 1500, "swing", firstleft);
+	}
+	//firstleft();
+});
+</script>

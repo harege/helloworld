@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="Infoway">
+<head>
+<script src="js/angular.js"></script>
+
+<body>
+<div ng-controller="Infowaycontroller">
+<input type="text" ng-model="employee.firstname" placeholder="Enter name here">{{employee.firstname}}
+<input type="text" ng-model="employee.lastname" placeholder="Enter name here">{{employee.lastname}}
+</div>
+
+
+</body>
+</html>
+<script>
+var InfowayModule=angular.module("Infoway",[]).controller("Infowaycontroller",function($scope){
+var emp={"firstname":"daniel","lastname":"tadesse"};	
+
+$scope.employee=emp;
+
+});
+</script>

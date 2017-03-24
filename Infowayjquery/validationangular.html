@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="myModule" >
+<head>
+<script src="js/angular.js"></script>
+</head>
+<body>
+<form name="myform">
+<div ng-controller="mycontroller">
+name<input type"text" ng-min="3" ng-maxlength="8" required ng-model="text"></br></br>
+male<input type="radio" value="male" name="gender" ng-model="radio"></br></br>
+female<input type="radio" value="female" name="gender" ng-model="radio"></br></br>
+country<select ng-model="select"><option value="ethiopia">ethiopia</option>
+<option value="okland">okland</option>
+<option value="sanfrancico">sanfrancico</option></select></br></br>
+comment<input type"textarea"></br></br>
+email<input type"text" ng-model="email"></br></br>
+India<input type="checkbox" ng-model="check"></br></br>
+Ethiopia<input type="checkbox" ng-model="check"></br></br>
+<input type="button" value="click" disabled></button>
+</div>
+</body>
+</html>
+<script>
+
+varmyModule=angular.module("myModule",[]).controller("mycontroller",function($scope,$location,$anchorScroll,$scope){
+
+
+});
+</script>

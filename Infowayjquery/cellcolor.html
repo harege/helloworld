@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+<style>
+
+table,tr,td{
+border: 1px solid white;
+border-collapse:collapse;
+margin-left:15%;
+font-size:23px;
+color:white;
+}
+
+</style>
+</head>
+
+<body style="background-color:black">
+<h1 align="center"  style="color:white">Students Registration Form</h1></br>
+<table style="width:75%;color:white;text-align:center;" id="tab2">
+  <tr id="tr1">
+<td id="td1" style="color:red">Student name</td>
+<td style="color:red" id="td2">Username</td>
+<td style="color:red" id="td3">Userid</td>
+</tr>
+<tr>
+<tr>
+<td>Jone</td>
+<td>daniezan</td>
+<td>dani123</td>
+</tr>
+<tr>
+<td>David</td>
+<td>daviade</td>
+<td>david965</td>
+</tr>
+<tr>
+<td>Robert</td>
+<td>roberob2</td>
+<td>rob5987</td>
+</tr>
+<tr>
+<td>Scott</td>
+<td>scotzan</td>
+<td>scot1235</td>
+</tr>
+</table>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$("td[id$='td1']").mouseenter(function(){
+$("td[id$='td1']").css("background-color","green");
+});
+$("td[id$='td1']").mouseleave(function(){
+$("td[id$='td1']").css("background-color","yellow");
+});
+$("td[id$='td2']").mouseenter(function(){
+$("td[id$='td2']").css("background-color","green");
+});
+$("td[id$='td2']").mouseleave(function(){
+$("td[id$='td2']").css("background-color","yellow");
+});
+$("td[id$='td3']").mouseenter(function(){
+$("td[id$='td3']").css("background-color","green");
+});
+$("td[id$='td3']").mouseleave(function(){
+$("td[id$='td3']").css("background-color","yellow");
+});
+});
+</script>

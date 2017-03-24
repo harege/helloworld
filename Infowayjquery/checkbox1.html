@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+
+<style>
+
+.colorclass{
+  background-color : green;
+}
+</style
+</head>
+
+<body>
+<form>
+<table style="width:50%;">
+  <tr>
+    <th>checkbox</th>
+<th id=>username</th>
+<th>userid</th>
+</tr>
+<tr>
+<td><input type="checkbox" class="ch1"></td>
+<td id="a">daniburger</td>
+<td id="b">123</td>
+</tr>
+<tr id="a">
+<td><input type="checkbox" class="ch1"></td>
+<td>daniman</td>
+<td >568</td>
+</tr>
+<tr id="b">
+<td><input type="checkbox" class="ch1"></td>
+<td>daniezana</td>
+<td>856</td>
+</tr>
+</table>
+<div id="tst"></div>
+<input type="button" value="submit" id="submi"></button>
+</form>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$("#submi").click(function(){
+if($("input:checked").length==0){
+alert("please check one");
+}
+$(".ch1").click(function(){
+	
+	if($(this).is(":checked")){
+
+	$(this).parents("tr:eq(0)").addClass("colorclass");
+	}else{
+$(this).parents("tr:eq(0)").removeClass("colorclass");
+}
+});
+});
+});
+</script>

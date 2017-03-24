@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<script src="js/jquery-3.1.1.min.js"></script>
+</script>
+
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("td").each(function(){
+alert($(this).text());
+});
+});
+});
+
+</script>
+<style>
+
+.colorclass{
+border-style:solid;
+  border-color :red;
+}
+
+table,th,td{
+border: 1px solid black;
+border-collapse:collapse;
+}
+</style>
+</head>
+
+<body>
+
+<table style="width:50%;" id="tab1">
+  <tr> 
+<td>malename</td>
+<td>username</td>
+<td>userid</td>
+</tr>
+<tr>
+
+<td>daniel</td>
+<td>daniman</td>
+<td>563</td>
+</tr>
+<tr>
+
+<td >daniel</td>
+<td>daniman</td>
+<td>563</td>
+</tr>
+<tr>
+	
+<td>daniel</td>
+<td>daniman</td>
+<td>563</td>
+</tr>
+</table>
+
+<button> click</button>
+</body>
+</html>
+

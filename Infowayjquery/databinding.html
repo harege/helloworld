@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="myMuodule">
+<head>
+<script src="js/angular.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body style="background:lightgrey">
+<h1 align="center" style="color:red">MONTHLY PAYMENT</h1>
+<form name="myForm">
+<div ng-controller="mycontroller">
+<div>Amount</div><input type="text" ng-model="amount" name="amount" required  ng-pattern="number">
+<span style="color:red" ng-show="myForm.amount.$error.pattern">Amount only number.</span>
+<span style="color:red" ng-show="myForm.amount.$error.required">Amount is required.</span></br></br>
+
+<div>Interest Rate(%)</div><input type="text" ng-model="interest" name="interest" required ng-pattern="number1">
+<span style="color:red" ng-show="myForm.interest.$error.pattern">Amount only number.</span>
+<span style="color:red" ng-show="myForm.interest.$error.required">Interest is required.</span></br></br>
+<!--<div>Loan Term(Months)</div><select ng-model="time" name="time" required ng-pattern="number2"><option value="36" selected>36</option><option value="48">48</option></select>-->
+
+
+<div>Loan Term(Months)</div><input type="text" ng-model="time" name="time" required ng-pattern="number2">
+<span style="color:red" ng-show="myForm.time.$error.pattern">Amount only number.</span>
+<span  style="color:red" ng-show="myForm.time.$error.required">Time is required.</span>
+</br></br>
+</form>
+Estimated Mothly Interest To pay:${{((amount*interest/100)/time)}}</div>
+
+</body>
+</html>
+<script>
+var myModule=angular.module("myMuodule",[]).controller("mycontroller",function($scope){
+$scope.amount="";
+$scope.time="";
+$scope.interest="";
+$scope.number=/^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$/;
+$scope.number1=/^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$/;
+$scope.number2=/^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$/;
+
+});	
+</script>
